@@ -1,0 +1,11 @@
+{% extends 'hello_app/base.html' %}
+
+        {% block title %}
+           Child 1
+        {% endblock %}
+
+
+   {% block content %}
+       {{ block.super }}
+       Jestem pierwszym dzieckiem
+        {% endblock %}

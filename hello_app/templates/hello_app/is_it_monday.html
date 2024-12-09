@@ -4,14 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <title>It Is Monday</title>
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    <script src="{% static 'js/script.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'hello_app/css/style.css' %}">
+    <script src="{% static 'hello_app/js/script.js' %}"></script>
 </head>
 <body>
     <h1>
         {% if is_monday %}
             TAK
-            <div><img src="{% static 'img/monday.jpg' %}"></div>
+            <div><img src="{% static 'hello_app/img/monday.jpg' %}"></div>
         {% else %}
             Nie
     {% endif %}

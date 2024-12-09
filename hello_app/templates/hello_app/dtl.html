@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<h2> Owoce</h2>
+    <ul>
+    {% for item in fruits %}
+        <li> {{ item }}</li>
+    {% endfor %}
+    </ul>
+    {# komentarz jednolinijkowy #}
+    {% comment %}
+    wielonijkowy
+    komentarz
+    blbalba
+    {% endcomment %} 
+
+  <p> {{ fruits|length }}</p>      {# przykład uzycia filtra #}
+  <p> {{ fruits|join:", " }}</p>  
+  <p> {{ fruits|length|add:"2" }}</p>    {# przykład łańcuchowania filtrów #}
+ <p> {{ fruits|cut:a}}</p>
+
+
+<p>{{ user.age }}</p>   
+<p>{{ cow.name }}</p>   
+<p>{{ fruits.0 }}</p> 
+
+<ul>    
+    {% for fruit in fruits %}   
+        <li>{{ forloop }}</li> 
+    {% endfor %}    
+</ul>
+</body>
+</html>
