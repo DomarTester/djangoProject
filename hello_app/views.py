@@ -1,3 +1,5 @@
+import datetime
+
 from django.shortcuts import render
 from django.shortcuts import HttpResponse
 from django.utils.html import escape
@@ -20,3 +22,9 @@ def hello_template(request, name):
     return render(
         request, "hello.html", context={"name": name}
     )  # tutaj zamiast "name" może być "x" ale w tedy w szablonie odwołujemy się do "x"
+
+
+def is_it_monday(requerst):
+    now = datetime.datetime.now()
+    is_monday = now.weekday() == 0
+    return render(requerst, "is_it_monday.html", context={"is_monday": is_monday})

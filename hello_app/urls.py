@@ -11,4 +11,5 @@ urlpatterns = [
     ),  # przykład parametryzacji. W konwenterzze nazwa argumentu z funckji (muszą być te same nazwy)
     # może być samo <name> i też zadziała, jako domyslny
     path("template/<str:name>", views.hello_template),
+    path("is-it-monday", views.is_it_monday, name="is_it_monday"),
 ]
