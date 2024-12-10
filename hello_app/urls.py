@@ -8,10 +8,9 @@ app_name = "hello_app"  # tworzymy "szufladkę" tak jak dla staticów i template
 urlpatterns = [
     path("", views.hello),
     path(
-        "param/<str:name>/",
-        views.hello_name,  # param, bo inaczej chwytałoby wszystkie stringi,
-    ),  # przykład parametryzacji. W konwenterzze nazwa argumentu z funckji (muszą być te same nazwy)
-    # może być samo <name> i też zadziała, jako domyslny
+        "param/<str:name>/",  # param, bo inaczej chwytałoby wszystkie stringi i inne urle by nie działaly, bo parametr ma być stringiem
+        views.hello_name,  # przykład parametryzacji. W konwenterze nazwa argumentu z funckji (muszą być te same nazwy)
+    ),  # może być samo <name> i też zadziała, jako domyslny
     path("template/<str:name>/", views.hello_template),
     path("is-it-monday/", views.is_it_monday, name="is_it_monday"),
     path("dtl/", views.dtl, name="dtl"),

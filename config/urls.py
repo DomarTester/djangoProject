@@ -24,4 +24,5 @@ urlpatterns = [
     path(
         "hello/", include("hello_app.urls")
     ),  # include służy do odwołania się od pliku url w lokalnej aplikacji
+    path("form/", include("form_app.urls")),
 ]

@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     # 'hello_app'  - tak do tej poty używalismy, ale deweloperzy django chcą od tego odejść
     "hello_app.apps.HelloAppConfig",  # podejście zalecane przez najlepsze praktyki, czyli do klasy
+    "form_app.apps.FormAppConfig",
 ]
 
 MIDDLEWARE = [
